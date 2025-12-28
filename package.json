@@ -1,0 +1,38 @@
+{
+  "name": "calendar-backend",
+  "version": "1.0.0",
+  "description": "Calendar app backend API",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix --max-warnings 0"
+    ]
+  }
+}
